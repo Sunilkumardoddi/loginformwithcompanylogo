@@ -1,0 +1,177 @@
+:root{
+    --bg-color:#ECF0F1;
+    --text-color:#000000;
+    --box-shadow:0 3px 10px rgba(0,0,0,0.2);
+    --optional-shadow:0 1px 5px rgba(104,104,104,0.3);
+    font-size: 16px;
+}
+.text-center{
+    text-align: center;
+}
+/* reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* overflow-x: hidden; */
+    height: 100%;
+    width: 100%;
+}
+body{
+    font-family:  'Almarai', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100%;
+    width: 100%;
+}
+
+/* stying the logo */
+
+.logo_link{
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 65%);
+    max-width: 100%;
+    min-width: 500px;
+    display: block;
+}
+
+.logo_image{
+    /* logo centered because of width applied below  change width if you want image changes*/
+    width: 100%;
+    height:60px;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    object-fit:contain ;
+}
+img:hover{
+    transform: scaleY(1.10);
+    -webkit-transform: scaleY(1.10);
+    -moz-transform: scaleY(1.10);
+    -ms-transform: scaleY(1.10);
+    -o-transform: scaleY(1.10);
+}
+
+
+/* centering parent class div */
+.parent { 
+    width: 100%; 
+    height: 100%;
+    min-width:500px;
+    min-height: 500px;
+    max-width: 100%;
+    max-height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+margin: 0 auto;
+}
+/* centering form in a div */
+
+.around_form{
+    padding: 50px;
+    box-shadow: var(--box-shadow);
+
+}
+.loginform{
+padding: 50px;
+margin: 30px;
+}
+/* form elements  styling input and form*/
+.form_elements{
+    padding: 10px 0;
+    margin: 2px;
+
+}
+.form_elements>a{
+    text-decoration: none;
+    color: rgba(11, 88, 255, 0.822);
+    font-weight:700;
+    letter-spacing: 1px;
+    margin-left: 2px;
+}
+.form_elements>a:hover{
+    color: #000;
+}
+input,button{
+border: 0;
+outline: none;
+background-color: none;
+font-size:medium;
+}
+input{
+    border-bottom:2px solid goldenrod;
+    padding: 1rem;
+    background-color:var(--bg-color);
+}
+input:focus{
+    border-bottom: 2px solid #4323;
+    border-left: 2px solid goldenrod;
+}
+input::placeholder{
+    color: #000;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+input:focus::placeholder{
+    font-size: 0.9rem;
+    text-align: center;
+    color: #000;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+input[type="checkbox"]{
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.btn{
+width: 100%;
+    background-color: #000;
+    color: #ECF0F1;
+    text-align: center;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition:background-color .5s, outline .5s step-end;
+    -webkit-transition:background-color .5s, outline .5s step-end;
+    -moz-transition:background-color .5s, outline .5s step-end;
+    -ms-transition:background-color .5s, outline .5s step-end;
+    -o-transition:background-color .5s, outline .5s step-end;
+}
+.btn:hover{
+    color: #000;
+    background-color: rgba(100, 100, 100 , 0.3);
+    box-shadow: var(--optional-shadow);
+   outline: 2px solid #000;
+    outline-offset: 2px;
+}
+.btn:active{
+    color: goldenrod;
+    background-color: #fff;
+    outline: 0;
+}
+
+
+footer{
+    color: #ECF0F1;
+    padding: 1rem;
+    max-width: 100%;
+    min-width: 500px;
+}
+
+/* Making responsive */
+
+
+@media (max-width:750px) {
+   .around_form{
+       box-shadow:0 3px 10px rgba(150, 145, 145, 0.692) ;
+   }
+}
